@@ -135,16 +135,40 @@ Qbar=R|(Qbar&(~S));
 end
 endmodule
 
+JK-Flip-Flop
+module de5(J,K,clk,Q,Qbar);
+input J,K,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin
+    Q=((~Q)&J)|(Q&(~K));
+    Qbar=~Q;
+end
+endmodule
+
+
 ```
 ### RTL LOGIC FOR FLIPFLOPS 
 SR-Flip-Flop
 
 ![image](https://github.com/SamyukthaSreenivasan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475703/ea8a773c-b6c6-4f51-b81b-fd724341b6da)
 
+JK-Flip-Flop
+![image](https://github.com/SamyukthaSreenivasan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475703/d4249971-8b9e-4996-a71a-3acddd07bb3f)
+
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
+SR-Flip-Flop
 
 ![image](https://github.com/SamyukthaSreenivasan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475703/408f5296-eba1-4842-a08d-c1de9d230f27)
 
+JK-Flip-Flop
+
+![image](https://github.com/SamyukthaSreenivasan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475703/ebfc48cf-2f93-4384-a8fb-7ad92aa7928b)
+
+
 ### RESULTS 
-SR Flip Flop is implemented successfully.
+SR Flip Flop and JK Flip Flop is implemented successfully.
