@@ -1,4 +1,4 @@
-# Experiment--05-Implementation-of-flipflops-using-verilog
+![image](https://github.com/SamyukthaSreenivasan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475703/fdddc9ab-cdad-4c20-b8e7-32ad54584833)# Experiment--05-Implementation-of-flipflops-using-verilog
 ### AIM: To implement all the flipflops using verilog and validating their functionality using their functional tables
 ### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
 ### SOFTWARE REQUIRED:   Quartus prime
@@ -117,10 +117,12 @@ Step:5 End the program with endmodule. Step:6 Run the program and choose RTL vie
 
 ### PROGRAM 
 /*
+```
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
 Developed by:Samyuktha S 
 RegisterNumber:  212222240089
 */
+```
 ```
 SR-Flip-Flop
 module exp5(S,R,Q,Qbar,Clk);
@@ -136,7 +138,7 @@ end
 endmodule
 
 JK-Flip-Flop
-module de5(J,K,clk,Q,Qbar);
+module flipflops(J,K,clk,Q,Qbar);
 input J,K,clk;
 output reg Q;
 output reg Qbar;
@@ -144,8 +146,8 @@ initial Q=0;
 initial Qbar=1;
 always @(posedge clk)
 begin
-    Q=((~Q)&J)|(Q&(~K));
-    Qbar=~Q;
+Q=(J&(~Q))|((~K)&Q);
+Qbar=((~J)&(Qbar))|K&(~Qbar);
 end
 endmodule
 
@@ -157,7 +159,8 @@ SR-Flip-Flop
 ![image](https://github.com/SamyukthaSreenivasan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475703/ea8a773c-b6c6-4f51-b81b-fd724341b6da)
 
 JK-Flip-Flop
-![image](https://github.com/SamyukthaSreenivasan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475703/d4249971-8b9e-4996-a71a-3acddd07bb3f)
+
+![image](https://github.com/SamyukthaSreenivasan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475703/f6044376-dc31-4654-9c2d-a629deed6cee)
 
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
@@ -167,7 +170,8 @@ SR-Flip-Flop
 
 JK-Flip-Flop
 
-![image](https://github.com/SamyukthaSreenivasan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475703/ebfc48cf-2f93-4384-a8fb-7ad92aa7928b)
+![image](https://github.com/SamyukthaSreenivasan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/119475703/9022156d-68dc-4b91-beca-65d774d68d74)
+
 
 
 ### RESULTS 
